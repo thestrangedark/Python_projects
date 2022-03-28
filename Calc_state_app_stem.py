@@ -17,7 +17,7 @@ class main_window(QWidget, Ui_Form):
         """
         super().__init__()  #run constructor of parent classes
         self.setupUi(self)  #run setupUi() (see Ui_Form)
-        #$JES MISSING CODE$ ('Steam Property Calculator') # set the window title
+        self.setWindowTitle('Steam Property Calculator') # set the window title
 
         self.Steam=steam()  # instantiate a steam object
         #create a list of the check boxes on the main window
@@ -46,12 +46,12 @@ class main_window(QWidget, Ui_Form):
         if nChecked!=2:
             return
 
-        self.Steam.P=#$JES MISSING CODE HERE$  read from appropriate line edit and convert to floating point number if box checked, otherwise set to None
-        self.Steam.T=#$JES MISSING CODE HERE$  read from appropriate line edit and convert to floating point number if box checked, otherwise set to None
-        self.Steam.x=#$JES MISSING CODE HERE$  read from appropriate line edit and convert to floating point number if box checked, otherwise set to None
-        self.Steam.h=#$JES MISSING CODE HERE$  read from appropriate line edit and convert to floating point number if box checked, otherwise set to None
-        self.Steam.s=#$JES MISSING CODE HERE$  read from appropriate line edit and convert to floating point number if box checked, otherwise set to None
-        self.Steam.v=#$JES MISSING CODE HERE$  read from appropriate line edit and convert to floating point number if box checked, otherwise set to None
+        self.Steam.P= self.chk_Press#$JES MISSING CODE HERE$  read from appropriate line edit and convert to floating point number if box checked, otherwise set to None
+        self.Steam.T= self.chk_Temp#$JES MISSING CODE HERE$  read from appropriate line edit and convert to floating point number if box checked, otherwise set to None
+        self.Steam.x= self.chk_Quality#$JES MISSING CODE HERE$  read from appropriate line edit and convert to floating point number if box checked, otherwise set to None
+        self.Steam.h= self.chk_Enthalpy#$JES MISSING CODE HERE$  read from appropriate line edit and convert to floating point number if box checked, otherwise set to None
+        self.Steam.s= self.chk_Entropy#$JES MISSING CODE HERE$  read from appropriate line edit and convert to floating point number if box checked, otherwise set to None
+        self.Steam.v= self.chk_SpV#$JES MISSING CODE HERE$  read from appropriate line edit and convert to floating point number if box checked, otherwise set to None
 
         self.Steam.calc()
         state=self.Steam
